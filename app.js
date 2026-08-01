@@ -8,10 +8,11 @@ const state = {
 const el = {
   sampleGrid: document.getElementById("sampleGrid"),
   resultTitle: document.getElementById("resultTitle"),
-  resultMeta: document.getElementById("resultMeta"),
   confidence: document.getElementById("confidence"),
   boxCount: document.getElementById("boxCount"),
   resultImage: document.getElementById("resultImage"),
+  registrationImage: document.getElementById("registrationImage"),
+  differenceImage: document.getElementById("differenceImage"),
   heatmapImage: document.getElementById("heatmapImage"),
   panelImage: document.getElementById("panelImage"),
 };
@@ -39,10 +40,13 @@ function renderSamples() {
 function updateSampleView(sample) {
   el.resultImage.src = sample.resultUrl;
   el.resultImage.alt = `Precomputed result for ${sample.labelDisplay}`;
+  el.registrationImage.src = sample.registrationUrl;
+  el.registrationImage.alt = `Registration view for ${sample.labelDisplay}`;
+  el.differenceImage.src = sample.differenceUrl;
+  el.differenceImage.alt = `Difference view for ${sample.labelDisplay}`;
   el.heatmapImage.src = sample.heatmapUrl;
   el.panelImage.src = sample.panelUrl;
   el.resultTitle.textContent = `${sample.predictedDisplay || sample.labelDisplay} detected`;
-  el.resultMeta.textContent = "Local Python pipeline output";
   el.confidence.textContent = `${((sample.confidence || 0) * 100).toFixed(1)}%`;
   el.boxCount.textContent = String(sample.boxCount || 0);
 }
