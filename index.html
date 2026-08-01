@@ -11,69 +11,57 @@
     <header class="topbar">
       <div>
         <h1>CHDP-DIFF Demo</h1>
-        <span>Precomputed RegionSIFT + SSIM results from the local Python pipeline</span>
+        <span>Precomputed local Python outputs for before-and-after image difference recognition</span>
       </div>
       <span class="mode-pill">Static GitHub Pages</span>
     </header>
 
     <main>
-      <section class="result-band">
-        <div class="result-copy">
-          <div>
+      <section class="top-row">
+        <div class="result-card">
+          <div class="result-copy">
             <p class="eyebrow">Precomputed result</p>
             <h2 id="resultTitle">Select a sample pair</h2>
-            <p id="resultMeta">Local Python pipeline output appears here.</p>
+            <p id="resultMeta">Local Python pipeline output.</p>
+            <div class="metrics">
+              <div><span id="confidence">--</span><small>confidence</small></div>
+              <div><span id="boxCount">--</span><small>boxes</small></div>
+            </div>
           </div>
-          <div class="metrics">
-            <div><span id="confidence">--</span><small>confidence</small></div>
-            <div><span id="boxCount">--</span><small>boxes</small></div>
+          <div class="result-image">
+            <img id="resultImage" alt="Precomputed detection result" />
           </div>
         </div>
-        <div class="result-image">
-          <img id="resultImage" alt="Precomputed detection result" />
+
+        <div class="process-card">
+          <figure>
+            <figcaption>Registration pipeline</figcaption>
+            <img src="assets/reference/registration.png" alt="Registration pipeline" />
+          </figure>
+          <figure>
+            <figcaption>Difference pipeline</figcaption>
+            <img src="assets/reference/difference.png" alt="Difference pipeline" />
+          </figure>
         </div>
       </section>
 
-      <p id="notice" class="notice"></p>
-
-      <section class="workspace">
-        <div class="visual-panel">
-          <div class="section-title">
-            <p class="eyebrow">Pipeline output</p>
-          </div>
-          <div class="tabs">
-            <button class="tab active" data-visual="heatmap">Heatmap</button>
-            <button class="tab" data-visual="panel">Full panel</button>
-          </div>
-          <div class="visual-frame">
-            <img id="heatmapImage" class="visual-img active" alt="Difference heatmap" src="assets/reference/heatmap_reference.png" />
-            <img id="panelImage" class="visual-img" alt="Full pipeline panel" src="" />
-          </div>
+      <section class="pipeline-row">
+        <div class="section-title">
+          <p class="eyebrow">Pipeline output</p>
         </div>
-        <aside class="flow-panel">
-          <div class="section-title">
-            <p class="eyebrow">Current pair views</p>
-          </div>
-          <div class="pair-views">
-            <figure>
-              <figcaption>Difference</figcaption>
-              <img id="differenceImage" alt="Difference image for selected pair" />
-            </figure>
-            <figure>
-              <figcaption>Registration</figcaption>
-              <img id="registrationImage" alt="Registration overlay for selected pair" />
-            </figure>
-          </div>
-        </aside>
+        <div class="output-grid">
+          <figure class="heatmap-frame">
+            <figcaption>Heatmap</figcaption>
+            <img id="heatmapImage" alt="Difference heatmap" />
+          </figure>
+          <figure class="panel-frame">
+            <figcaption>Full panel</figcaption>
+            <img id="panelImage" alt="Full pipeline panel" />
+          </figure>
+        </div>
       </section>
 
       <section class="dataset-section">
-        <div class="dataset-head">
-          <div class="section-title">
-            <p class="eyebrow">Dataset pairs</p>
-          </div>
-          <div id="status" class="status">Loading samples...</div>
-        </div>
         <div id="sampleGrid" class="sample-grid"></div>
       </section>
     </main>
