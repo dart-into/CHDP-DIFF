@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RegionSIFT ONNX/WASM Demo</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web@1.20.1/dist/ort.min.js"></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <h1>RegionSIFT SSIM Classification</h1>
+        <span>GitHub Pages demo: ONNX Runtime Web + WASM</span>
+      </div>
+      <button id="runBtn" class="primary">Run ONNX inference</button>
+    </header>
+
+    <main>
+      <section class="result-band">
+        <div class="result-copy">
+          <div>
+            <p class="eyebrow">Browser inference</p>
+            <h2 id="resultTitle">Select a sample pair</h2>
+            <p id="resultMeta">The model runs locally in the browser with ONNX/WASM. Detection boxes and pipeline views are precomputed from RegionSIFT + SSIM.</p>
+          </div>
+          <div class="metrics">
+            <div><span id="confidence">--</span><small>confidence</small></div>
+            <div><span id="boxCount">--</span><small>boxes</small></div>
+            <div><span id="runtime">--</span><small>runtime</small></div>
+          </div>
+        </div>
+        <div class="result-image">
+          <canvas id="resultCanvas"></canvas>
+          <div id="emptyResult" class="placeholder">Inference result appears here</div>
+        </div>
+      </section>
+
+      <section class="workspace">
+        <div class="visual-panel">
+          <div class="section-title">
+            <p class="eyebrow">Pipeline output</p>
+            <h2>Precomputed visualization</h2>
+          </div>
+          <div class="tabs">
+            <button class="tab active" data-visual="heatmap">Heatmap</button>
+            <button class="tab" data-visual="panel">Full panel</button>
+          </div>
+          <div class="visual-frame">
+            <img id="heatmapImage" class="visual-img active" alt="Difference heatmap" src="assets/reference/heatmap_reference.png" />
+            <img id="panelImage" class="visual-img" alt="Full pipeline panel" src="" />
+          </div>
+        </div>
+        <aside class="flow-panel">
+          <div class="section-title">
+            <p class="eyebrow">Reference</p>
+            <h2>Registration and detection flow</h2>
+          </div>
+          <div class="tabs">
+            <button class="tab active" data-ref="assets/reference/registration.png">Registration</button>
+            <button class="tab" data-ref="assets/reference/difference.png">Difference</button>
+          </div>
+          <img id="flowImage" alt="Pipeline flow" src="assets/reference/registration.png" />
+        </aside>
+      </section>
+
+      <section class="dataset-section">
+        <div class="dataset-head">
+          <div class="section-title">
+            <p class="eyebrow">Dataset pairs</p>
+            <h2>Curated samples</h2>
+          </div>
+          <div id="status" class="status">Loading samples...</div>
+        </div>
+        <div id="sampleGrid" class="sample-grid"></div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

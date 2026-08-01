@@ -1,0 +1,265 @@
+{
+  "samples": [
+    {
+      "id": "chenpi/409229",
+      "slug": "chenpi__409229",
+      "label": "chenpi",
+      "labelDisplay": "Chenpi",
+      "name": "409229",
+      "note": "clear added region after registration",
+      "beforeUrl": "assets/samples/chenpi__409229/before.jpg",
+      "afterUrl": "assets/samples/chenpi__409229/after.jpg",
+      "panelUrl": "assets/samples/chenpi__409229/panel.jpg",
+      "heatmapUrl": "assets/samples/chenpi__409229/heatmap.jpg",
+      "boxes": [
+        {
+          "x": 830,
+          "y": 180,
+          "w": 411,
+          "h": 719,
+          "area": 295509.0,
+          "std": 0.0,
+          "edge": 0.0
+        },
+        {
+          "x": 200,
+          "y": 180,
+          "w": 629,
+          "h": 269,
+          "area": 169201.0,
+          "std": 0.0,
+          "edge": 0.0
+        }
+      ]
+    },
+    {
+      "id": "danggui/383410",
+      "slug": "danggui__383410",
+      "label": "danggui",
+      "labelDisplay": "Danggui",
+      "name": "383410",
+      "note": "stable overlap with localized changes",
+      "beforeUrl": "assets/samples/danggui__383410/before.jpg",
+      "afterUrl": "assets/samples/danggui__383410/after.jpg",
+      "panelUrl": "assets/samples/danggui__383410/panel.jpg",
+      "heatmapUrl": "assets/samples/danggui__383410/heatmap.jpg",
+      "boxes": [
+        {
+          "x": 150,
+          "y": 0,
+          "w": 721,
+          "h": 325,
+          "area": 234325.0,
+          "std": 0.0,
+          "edge": 0.0
+        }
+      ]
+    },
+    {
+      "id": "danshen/group000003",
+      "slug": "danshen__group000003",
+      "label": "danshen",
+      "labelDisplay": "Danshen",
+      "name": "group000003",
+      "note": "dense texture with clean alignment",
+      "beforeUrl": "assets/samples/danshen__group000003/before.jpg",
+      "afterUrl": "assets/samples/danshen__group000003/after.jpg",
+      "panelUrl": "assets/samples/danshen__group000003/panel.jpg",
+      "heatmapUrl": "assets/samples/danshen__group000003/heatmap.jpg",
+      "boxes": [
+        {
+          "x": 330,
+          "y": 0,
+          "w": 419,
+          "h": 359,
+          "area": 150421.0,
+          "std": 0.0,
+          "edge": 0.0
+        },
+        {
+          "x": 630,
+          "y": 480,
+          "w": 119,
+          "h": 119,
+          "area": 14161.0,
+          "std": 0.0,
+          "edge": 0.0
+        }
+      ]
+    },
+    {
+      "id": "fubaishao/group000001",
+      "slug": "fubaishao__group000001",
+      "label": "fubaishao",
+      "labelDisplay": "Fubaishao",
+      "name": "group000001",
+      "note": "distinct new patches",
+      "beforeUrl": "assets/samples/fubaishao__group000001/before.jpg",
+      "afterUrl": "assets/samples/fubaishao__group000001/after.jpg",
+      "panelUrl": "assets/samples/fubaishao__group000001/panel.jpg",
+      "heatmapUrl": "assets/samples/fubaishao__group000001/heatmap.jpg",
+      "boxes": [
+        {
+          "x": 150,
+          "y": 0,
+          "w": 539,
+          "h": 299,
+          "area": 161161.0,
+          "std": 0.0,
+          "edge": 0.0
+        },
+        {
+          "x": 330,
+          "y": 420,
+          "w": 359,
+          "h": 239,
+          "area": 85801.0,
+          "std": 0.0,
+          "edge": 0.0
+        }
+      ]
+    },
+    {
+      "id": "fuling/fuling_383087",
+      "slug": "fuling__fuling_383087",
+      "label": "fuling",
+      "labelDisplay": "Fuling",
+      "name": "fuling_383087",
+      "note": "good registration overlay",
+      "beforeUrl": "assets/samples/fuling__fuling_383087/before.jpg",
+      "afterUrl": "assets/samples/fuling__fuling_383087/after.jpg",
+      "panelUrl": "assets/samples/fuling__fuling_383087/panel.jpg",
+      "heatmapUrl": "assets/samples/fuling__fuling_383087/heatmap.jpg",
+      "boxes": [
+        {
+          "x": 366,
+          "y": 270,
+          "w": 385,
+          "h": 378,
+          "area": 145530.0,
+          "std": 0.0,
+          "edge": 0.0
+        },
+        {
+          "x": 420,
+          "y": 0,
+          "w": 331,
+          "h": 216,
+          "area": 71496.0,
+          "std": 0.0,
+          "edge": 0.0
+        }
+      ]
+    },
+    {
+      "id": "huangqi/409113",
+      "slug": "huangqi__409113",
+      "label": "huangqi",
+      "labelDisplay": "Huangqi",
+      "name": "409113",
+      "note": "large added region",
+      "beforeUrl": "assets/samples/huangqi__409113/before.jpg",
+      "afterUrl": "assets/samples/huangqi__409113/after.jpg",
+      "panelUrl": "assets/samples/huangqi__409113/panel.jpg",
+      "heatmapUrl": "assets/samples/huangqi__409113/heatmap.jpg",
+      "boxes": [
+        {
+          "x": 130,
+          "y": 0,
+          "w": 629,
+          "h": 629,
+          "area": 395641.0,
+          "std": 0.0,
+          "edge": 0.0
+        }
+      ]
+    },
+    {
+      "id": "shengdihuang/409143",
+      "slug": "shengdihuang__409143",
+      "label": "shengdihuang",
+      "labelDisplay": "Shengdihuang",
+      "name": "409143",
+      "note": "strong circular alignment",
+      "beforeUrl": "assets/samples/shengdihuang__409143/before.jpg",
+      "afterUrl": "assets/samples/shengdihuang__409143/after.jpg",
+      "panelUrl": "assets/samples/shengdihuang__409143/panel.jpg",
+      "heatmapUrl": "assets/samples/shengdihuang__409143/heatmap.jpg",
+      "boxes": [
+        {
+          "x": 310,
+          "y": 180,
+          "w": 931,
+          "h": 449,
+          "area": 418019.0,
+          "std": 0.0,
+          "edge": 0.0
+        },
+        {
+          "x": 490,
+          "y": 630,
+          "w": 539,
+          "h": 269,
+          "area": 144991.0,
+          "std": 0.0,
+          "edge": 0.0
+        }
+      ]
+    },
+    {
+      "id": "wenshanyao/409101",
+      "slug": "wenshanyao__409101",
+      "label": "wenshanyao",
+      "labelDisplay": "Wenshanyao",
+      "name": "409101",
+      "note": "compact detected medicine region",
+      "beforeUrl": "assets/samples/wenshanyao__409101/before.jpg",
+      "afterUrl": "assets/samples/wenshanyao__409101/after.jpg",
+      "panelUrl": "assets/samples/wenshanyao__409101/panel.jpg",
+      "heatmapUrl": "assets/samples/wenshanyao__409101/heatmap.jpg",
+      "boxes": [
+        {
+          "x": 240,
+          "y": 70,
+          "w": 490,
+          "h": 630,
+          "area": 308700.0,
+          "std": 0.0,
+          "edge": 0.0
+        }
+      ]
+    },
+    {
+      "id": "yiyiren/group000004",
+      "slug": "yiyiren__group000004",
+      "label": "yiyiren",
+      "labelDisplay": "Yiyiren",
+      "name": "group000004",
+      "note": "balanced heatmap response",
+      "beforeUrl": "assets/samples/yiyiren__group000004/before.jpg",
+      "afterUrl": "assets/samples/yiyiren__group000004/after.jpg",
+      "panelUrl": "assets/samples/yiyiren__group000004/panel.jpg",
+      "heatmapUrl": "assets/samples/yiyiren__group000004/heatmap.jpg",
+      "boxes": [
+        {
+          "x": 210,
+          "y": 120,
+          "w": 179,
+          "h": 479,
+          "area": 85741.0,
+          "std": 0.0,
+          "edge": 0.0
+        },
+        {
+          "x": 750,
+          "y": 0,
+          "w": 121,
+          "h": 539,
+          "area": 65219.0,
+          "std": 0.0,
+          "edge": 0.0
+        }
+      ]
+    }
+  ]
+}
