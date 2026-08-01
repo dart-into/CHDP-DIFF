@@ -67,6 +67,20 @@ button {
   text-transform: uppercase;
 }
 
+.mode-pill {
+  min-height: 30px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--brand-dark);
+  background: var(--panel);
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
 .primary {
   min-height: 34px;
   padding: 0 14px;
@@ -85,8 +99,8 @@ button {
 main {
   height: calc(100vh - 54px);
   display: grid;
-  grid-template-rows: 180px minmax(0, 1fr) 140px;
-  gap: 10px;
+  grid-template-rows: 176px 28px minmax(0, 1fr) 150px;
+  gap: 8px;
   padding: 10px;
 }
 
@@ -173,21 +187,26 @@ main {
   background: #16202a;
 }
 
-.result-image canvas {
-  position: absolute;
-  inset: 0;
+.result-image img {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  object-position: center;
 }
 
-.placeholder {
-  position: absolute;
-  inset: 0;
-  display: grid;
-  place-items: center;
-  color: #aab8c4;
-  font-size: 13px;
+.notice {
+  min-height: 0;
+  margin: 0;
+  overflow: hidden;
+  padding: 6px 10px;
+  border: 1px solid #cbd8df;
+  border-radius: 7px;
+  color: #364955;
+  background: #fffdf5;
+  font-size: 12px;
+  line-height: 1.25;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .visual-panel,
@@ -356,7 +375,7 @@ main {
   main {
     height: auto;
     min-height: calc(100vh - 54px);
-    grid-template-rows: auto 560px 220px;
+    grid-template-rows: auto auto 560px 220px;
   }
 
   .result-band,

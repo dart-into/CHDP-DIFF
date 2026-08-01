@@ -1,13 +1,17 @@
-# GitHub Pages ONNX/WASM Demo
+# CHDP-DIFF Static Demo
 
-This folder is a static GitHub Pages version of the RegionSIFT demo.
+This repository hosts a GitHub Pages demo for:
 
-It does not run the full Python pipeline in the browser. Instead:
+Recognition of Newly Added Chinese Herbal Decoction Pieces via Before-and-After Image Difference.
 
-- RegionSIFT + SSIM detection boxes and visualizations are precomputed for 3 curated image pairs.
-- The classifier is exported to `models/densenet169.onnx`.
-- The browser runs DenseNet169 classification on detected regions through ONNX Runtime Web's WASM backend.
-- The ONNX model is about 52 MB, which is under GitHub's 100 MB per-file limit.
+The web page is intentionally static:
+
+- 10 curated before-and-after image pairs are included.
+- RegionSIFT + SSIM localization results were precomputed with the local Python pipeline.
+- The displayed classification labels and confidence values come from the local Swin checkpoint output.
+- The browser only displays the prepared images and metadata.
+
+This choice keeps the public demo stable. GitHub Pages cannot run the Python pipeline directly, and the earlier ONNX/WASM browser model produced lower-quality demo results after conversion.
 
 ## Local Preview
 
@@ -23,24 +27,8 @@ Open:
 http://127.0.0.1:8080
 ```
 
-Do not open `index.html` directly from the filesystem; browser security blocks model/data fetches from `file://`.
+Do not open `index.html` directly from the filesystem; browser security blocks JSON/image fetches from `file://`.
 
-## Deploy To GitHub Pages
+## GitHub Pages
 
-Create an empty GitHub repository, then run:
-
-```bash
-git init
-git add .
-git commit -m "Add ONNX WASM demo"
-git branch -M main
-git remote add origin https://github.com/<your-name>/<your-repo>.git
-git push -u origin main
-```
-
-In GitHub, open the repository settings:
-
-1. Go to **Settings > Pages**.
-2. Set **Source** to **Deploy from a branch**.
-3. Select **main** and **/**.
-4. Save and wait for the Pages URL to appear.
+The included workflow in `.github/workflows/pages.yml` deploys the static page from the repository root.
