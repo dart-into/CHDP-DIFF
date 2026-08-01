@@ -1,4 +1,15 @@
 const SAMPLES_URL = "assets/samples.json";
+const REQUIRED_IDS = [
+  "sampleGrid",
+  "resultTitle",
+  "confidence",
+  "boxCount",
+  "resultImage",
+  "registrationImage",
+  "differenceImage",
+  "heatmapImage",
+  "panelImage",
+];
 
 const state = {
   samples: [],
@@ -16,6 +27,13 @@ const el = {
   heatmapImage: document.getElementById("heatmapImage"),
   panelImage: document.getElementById("panelImage"),
 };
+
+function assertElements() {
+  const missing = REQUIRED_IDS.filter((id) => !document.getElementById(id));
+  if (missing.length) {
+    throw new Error(`Missing page elements: ${missing.join(", ")}`);
+  }
+}
 
 function renderSamples() {
   el.sampleGrid.innerHTML = "";
@@ -52,6 +70,7 @@ function updateSampleView(sample) {
 }
 
 async function init() {
+  assertElements();
   const sampleData = await fetch(SAMPLES_URL).then((r) => r.json());
   state.samples = sampleData.samples || [];
   state.selected = state.samples[0] || null;
@@ -60,5 +79,5 @@ async function init() {
 }
 
 init().catch((err) => {
-  el.sampleGrid.textContent = err.message;
+  if (el.sampleGrid) el.sampleGrid.textContent = err.message;
 });
