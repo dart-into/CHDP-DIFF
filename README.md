@@ -32,3 +32,19 @@ Do not open `index.html` directly from the filesystem; browser security blocks J
 ## GitHub Pages
 
 The included workflow in `.github/workflows/pages.yml` deploys the static page from the repository root.
+
+## Local Dynamic Demo Package
+
+The local Python demo package is available from the repository release:
+
+```text
+https://github.com/dart-into/CHDP-DIFF/releases/download/local-demo-v1.0/CHDP-DIFF-local-demo.zip
+```
+
+Package contents include the local demo server, RegionSIFT + SSIM pipeline files, the Swin checkpoint, and 5 curated test image pairs.
+
+SHA256:
+
+```text
+1c51dd7890612d047d9a5d54d2c9dc8f525dd6bb772b264613e6372362fc03c7
+```
