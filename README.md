@@ -6,7 +6,7 @@ Recognition of Newly Added Chinese Herbal Decoction Pieces via Before-and-After 
 
 Online demo: https://dart-into.github.io/CHDP-DIFF/
 
-The online demo shows curated before-and-after image pairs with precomputed local pipeline outputs.
+The online demo shows before-and-after image pairs with precomputed local pipeline outputs.
 
 ## Abstract
 
@@ -20,10 +20,10 @@ Experiments on 172 dispensing-container image pairs from 10 categories achieved 
 
 The GitHub Pages web demo is intentionally static:
 
-- Curated before-and-after image pairs are included.
+- before-and-after image pairs are included.
 - RegionSIFT + SSIM localization results were precomputed with the local Python pipeline.
 - The displayed classification labels and confidence values come from the local Swin checkpoint output.
-- The browser only displays the prepared images and metadata.
+
 
 This choice keeps the public demo stable. GitHub Pages cannot run the Python pipeline directly, and the earlier ONNX/WASM browser model produced lower-quality demo results after conversion.
 
