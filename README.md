@@ -4,6 +4,10 @@ Recognition of Newly Added Chinese Herbal Decoction Pieces via Before-and-After 
 
 ![CHDP-DIFF overview](assets/paper_overview.png)
 
+Online demo: https://dart-into.github.io/CHDP-DIFF/
+
+The online demo shows curated before-and-after image pairs with precomputed local pipeline outputs.
+
 ## Abstract
 
 Recognizing newly added Chinese herbal decoction pieces is necessary for dispensing verification, but practical container images contain many categories and subtle inter-class differences. Moreover, the maintenance of large labeled datasets incurs considerable expense, especially when new categories are frequently introduced.
