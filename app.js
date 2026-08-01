@@ -12,11 +12,11 @@ const el = {
   resultMeta: document.getElementById("resultMeta"),
   confidence: document.getElementById("confidence"),
   boxCount: document.getElementById("boxCount"),
-  runtime: document.getElementById("runtime"),
   resultImage: document.getElementById("resultImage"),
   heatmapImage: document.getElementById("heatmapImage"),
   panelImage: document.getElementById("panelImage"),
-  flowImage: document.getElementById("flowImage"),
+  differenceImage: document.getElementById("differenceImage"),
+  registrationImage: document.getElementById("registrationImage"),
   notice: document.getElementById("notice"),
 };
 
@@ -55,12 +55,13 @@ function updateSampleView(sample) {
   el.resultImage.alt = `Precomputed result for ${sample.id}`;
   el.heatmapImage.src = sample.heatmapUrl;
   el.panelImage.src = sample.panelUrl;
+  el.differenceImage.src = sample.differenceUrl;
+  el.registrationImage.src = sample.registrationUrl;
   el.resultTitle.textContent = `${sample.predictedDisplay || sample.labelDisplay} detected`;
   el.resultMeta.textContent = `${sample.labelDisplay} / ${sample.name}. ${sample.note || "Local Python result."}`;
   el.confidence.textContent = `${((sample.confidence || 0) * 100).toFixed(1)}%`;
   el.boxCount.textContent = String(sample.boxCount || 0);
-  el.runtime.textContent = "local";
-  setStatus(`${state.samples.length} precomputed pairs loaded.`);
+  setStatus(`${state.samples.length} examples`);
 }
 
 async function init() {
@@ -76,11 +77,6 @@ async function init() {
 
 document.querySelectorAll(".tab").forEach((button) => {
   button.addEventListener("click", () => {
-    if (button.dataset.ref) {
-      document.querySelectorAll("[data-ref]").forEach((b) => b.classList.remove("active"));
-      button.classList.add("active");
-      el.flowImage.src = button.dataset.ref;
-    }
     if (button.dataset.visual) {
       document.querySelectorAll("[data-visual]").forEach((b) => b.classList.remove("active"));
       button.classList.add("active");

@@ -27,7 +27,6 @@
           <div class="metrics">
             <div><span id="confidence">--</span><small>confidence</small></div>
             <div><span id="boxCount">--</span><small>boxes</small></div>
-            <div><span id="runtime">local</span><small>source</small></div>
           </div>
         </div>
         <div class="result-image">
@@ -41,7 +40,6 @@
         <div class="visual-panel">
           <div class="section-title">
             <p class="eyebrow">Pipeline output</p>
-            <h2>Local visualization</h2>
           </div>
           <div class="tabs">
             <button class="tab active" data-visual="heatmap">Heatmap</button>
@@ -54,14 +52,18 @@
         </div>
         <aside class="flow-panel">
           <div class="section-title">
-            <p class="eyebrow">Reference</p>
-            <h2>Registration and detection flow</h2>
+            <p class="eyebrow">Current pair views</p>
           </div>
-          <div class="tabs">
-            <button class="tab active" data-ref="assets/reference/registration.png">Registration</button>
-            <button class="tab" data-ref="assets/reference/difference.png">Difference</button>
+          <div class="pair-views">
+            <figure>
+              <figcaption>Difference</figcaption>
+              <img id="differenceImage" alt="Difference image for selected pair" />
+            </figure>
+            <figure>
+              <figcaption>Registration</figcaption>
+              <img id="registrationImage" alt="Registration overlay for selected pair" />
+            </figure>
           </div>
-          <img id="flowImage" alt="Pipeline flow" src="assets/reference/registration.png" />
         </aside>
       </section>
 
@@ -69,7 +71,6 @@
         <div class="dataset-head">
           <div class="section-title">
             <p class="eyebrow">Dataset pairs</p>
-            <h2>10 curated samples</h2>
           </div>
           <div id="status" class="status">Loading samples...</div>
         </div>
